@@ -20,4 +20,3 @@ public class Constant2
         }
     }
 }
-// a
