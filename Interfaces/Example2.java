@@ -1,15 +1,15 @@
-abstract class Sample
-{
-	abstract void m1();
-	abstract void m2();
-}
+interface Sample1
+	{
+		void m1();
+		void m2();
+	}
 class Example2 extends Sample
 {
-	void m1()
+	public void m1()
 	{
 		System.out.println("Inside m1 method");
 	}
-	void m2()
+	public void m2()
 	{
 		System.out.println("Inside m2 method");
 	}
@@ -18,5 +18,9 @@ class Example2 extends Sample
 		Example2 e2=new Example2();
 		e2.m1();
 		e2.m2();
+		Sample1 s1=new Example2();
+		s1.m1();
+		s1.m2();
+		
 	}
 }
