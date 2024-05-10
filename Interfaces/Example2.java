@@ -3,7 +3,7 @@ interface Sample1
 		void m1();
 		void m2();
 	}
-class Example2 extends Sample
+class Example2 implement Sample1
 {
 	public void m1()
 	{
