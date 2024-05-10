@@ -2,7 +2,7 @@ interface Sample
 	{
 		void m1();
 	}
-class Example1 
+class Example1 implement Sample
 {
 	public void m1()
 	{
