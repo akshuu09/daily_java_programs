@@ -1,26 +1,37 @@
-abstract class Demo
-{
-	abstract void method1();
-	abstract void method2();
-	abstract void method3();
-}
-class Example3 extends Demo
-{
-	void method1()
+interface HdfcServices
 	{
-		System.out.println("method1");
+		void banking();
+		void insurance();
+		void finance();
 	}
-	void method2()
+abstract class HdfcBanking implements HdfcServices
 	{
-		System.out.println("method2");
+		public void banking()
+		{
+			System.out.println("Banking implementation");
+		}
 	}
+abstract class HdfcInsurance extends HdfcBanking
+	{
+		public void insurance()
+		{
+			System.out.println("Insurance implementation");
+		}
+	}
+abstract class HdfcFinance extends HdfcInsurance
+	{
+		public void banking()
+		{
+			System.out.println("Finance implementation");
+		}
+	}
+class Example3 {
 	public static void main(String args[])
 	{
-		Example3 e3=new Example3();
-		e3.method1();
+	   HdfcFinance cust1=new HdfcFinance();
+		cust1.banking();
+		cust1.insurance();
+		cust1.finance();
 	}
 }
 
-// Output:
-//error: Example3 is not abstract and does not override abstract method method3() in Demo
-//class Example3 extends Demo
